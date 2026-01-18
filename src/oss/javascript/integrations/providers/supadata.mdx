@@ -1,0 +1,34 @@
+# Supadata
+
+This page covers how to use the [Supadata](https://supadata.ai) ecosystem within LangChain. It allows you to load data from YouTube, TikTok, and other platforms.
+
+## Installation and Setup
+
+To use Supadata, you need to install the standalone integration package.
+
+```bash
+npm install @supadata/langchain-js
+```
+
+## Document Loader
+
+The Supadata integration allows you to load content from various video platforms as LangChain documents.
+
+```javascript
+import { SupadataLoader } from "@supadata/langchain-js";
+
+const loader = new SupadataLoader({
+  url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+  apiKey: "YOUR_SUPADATA_API_KEY", // Optional: if you have an API key
+});
+
+const docs = await loader.load();
+```
+
+## Resources
+
+* **NPM Package:** [@supadata/langchain-js](https://www.npmjs.com/package/@supadata/langchain-js)
+* **GitHub Repository:** [supadata-ai/langchain-js](https://github.com/supadata-ai/langchain-js)
+* **PyPI Package:** [supadata-langchain](https://pypi.org/project/supadata-langchain/)
+
+For detailed usage examples and API documentation, please refer to the [official GitHub repository](https://github.com/supadata-ai/langchain-js).
