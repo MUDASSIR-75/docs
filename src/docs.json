@@ -331,7 +331,6 @@
                         "oss/python/integrations/providers/huggingface",
                         "oss/python/integrations/providers/microsoft",
                         "oss/python/integrations/providers/ollama",
-                        "oss/python/integrations/providers/supadata",
                         "oss/python/integrations/chat/groq"
                       ]
                     },
@@ -722,7 +721,6 @@
                         "oss/javascript/integrations/chat/index",
                         "oss/javascript/integrations/tools/index",
                         "oss/javascript/integrations/llms/index",
-                        "oss/javascript/integrations/providers/supadata",
                         "oss/javascript/integrations/middleware/index",
                         "oss/javascript/integrations/stores/index",
                         "oss/javascript/integrations/document_transformers/index",
