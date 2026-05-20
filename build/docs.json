@@ -277,7 +277,6 @@
                 "langsmith/observability-concepts",
                 "langsmith/observability-llm-tutorial",
                 "langsmith/engine",
-                "langsmith/engine-webhooks",
                 {
                   "group": "Tracing setup",
                   "pages": [
@@ -349,6 +348,13 @@
                         "langsmith/upload-files-with-traces"
                       ]
                     },
+                    {
+                      "group": "Messages view",
+                      "pages": [
+                        "langsmith/messages-view-integrations",
+                        "langsmith/messages-view-trace-format"
+                      ]
+                    },
                     "langsmith/threads"
                   ]
                 },
@@ -395,6 +401,7 @@
                 {
                   "group": "Viewing & managing traces",
                   "pages": [
+                    "langsmith/view-traces",
                     "langsmith/filter-traces-in-application",
                     "langsmith/configure-input-output-preview",
                     "langsmith/manage-trace",
@@ -418,7 +425,8 @@
                   "group": "Automations",
                   "pages": [
                     "langsmith/rules",
-                    "langsmith/webhooks"
+                    "langsmith/webhooks",
+                    "langsmith/engine-webhooks"
                   ]
                 },
                 {
@@ -1510,6 +1518,7 @@
                     {
                       "group": "Deployment",
                       "pages": [
+                        "langsmith/deploy-managed-deep-agent",
                         "oss/javascript/deepagents/going-to-production"
                       ]
                     },
@@ -2312,11 +2321,19 @@
     },
     {
       "source": "/oss/python/deepagents/deploy",
-      "destination": "/oss/python/deepagents/deploy/overview"
+      "destination": "/langsmith/deploy-managed-deep-agent"
     },
     {
       "source": "/oss/javascript/deepagents/deploy",
-      "destination": "/oss/javascript/deepagents/deploy/overview"
+      "destination": "/langsmith/deploy-managed-deep-agent"
+    },
+    {
+      "source": "/oss/python/deepagents/deploy/overview",
+      "destination": "/langsmith/deploy-managed-deep-agent"
+    },
+    {
+      "source": "/oss/javascript/deepagents/deploy/overview",
+      "destination": "/langsmith/deploy-managed-deep-agent"
     },
     {
       "source": "/oss/python/langchain/evals",
