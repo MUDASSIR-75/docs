@@ -177,6 +177,15 @@
                 "langsmith/pricing-plans",
                 "langsmith/enterprise",
                 {
+                  "group": "LLM Gateway",
+                  "tag": "Private beta",
+                  "pages": [
+                    "langsmith/llm-gateway",
+                    "langsmith/llm-gateway-spend-policies",
+                    "langsmith/llm-gateway-redaction"
+                  ]
+                },
+                {
                   "group": "Account administration",
                   "pages": [
                     "langsmith/administration-overview",
@@ -210,15 +219,6 @@
                     },
                     "langsmith/manage-organization-by-api",
                     "langsmith/audit-logs"
-                  ]
-                },
-                {
-                  "group": "LLM Gateway",
-                  "tag": "Private beta",
-                  "pages": [
-                    "langsmith/llm-gateway",
-                    "langsmith/llm-gateway-spend-policies",
-                    "langsmith/llm-gateway-redaction"
                   ]
                 },
                 {
@@ -925,14 +925,28 @@
             {
               "tab": "Reference",
               "pages": [
-                "langsmith/reference",
-                "langsmith/smith-python-sdk",
-                "langsmith/smith-js-ts-sdk",
-                "langsmith/smith-go-sdk",
-                "langsmith/smith-java-sdk",
-                "langsmith/langgraph-python-sdk",
-                "langsmith/langgraph-js-ts-sdk",
-                "langsmith/smith-api-ref",
+                {
+                  "group": "General",
+                  "pages": [
+                    "langsmith/reference",
+                    {
+                      "group": "LangSmith API",
+                      "pages": [
+                        "langsmith/smith-api-ref"
+                      ],
+                      "openapi": {
+                        "source": "langsmith/langsmith-platform-openapi.json",
+                        "directory": "langsmith/smith-api"
+                      }
+                    },
+                    "langsmith/smith-python-sdk",
+                    "langsmith/smith-js-ts-sdk",
+                    "langsmith/smith-go-sdk",
+                    "langsmith/smith-java-sdk",
+                    "langsmith/langgraph-python-sdk",
+                    "langsmith/langgraph-js-ts-sdk"
+                  ]
+                },
                 {
                   "group": "LangSmith Deployment",
                   "pages": [
@@ -1114,7 +1128,7 @@
                       ]
                     },
                     {
-                      "group": "Code",
+                      "group": "Deep Agents Code",
                       "pages": [
                         "oss/python/deepagents/code/overview",
                         "oss/python/deepagents/code/memory-and-skills",
@@ -1566,7 +1580,7 @@
                       ]
                     },
                     {
-                      "group": "Code",
+                      "group": "Deep Agents Code",
                       "pages": [
                         "oss/javascript/deepagents/code/overview",
                         "oss/javascript/deepagents/code/memory-and-skills",
@@ -2514,7 +2528,7 @@
     },
     {
       "source": "/langsmith/api-ref",
-      "destination": "/langsmith/smith-api-ref"
+      "destination": "/langsmith/smith-api"
     },
     {
       "source": "/langsmith/js-ts-sdk",
