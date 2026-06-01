@@ -3,7 +3,6 @@ title: Memory
 ---
 
 
-
 AI applications need [memory](/oss/javascript/concepts/memory) to share context across multiple interactions. In LangGraph, you can add two types of memory:
 
 * [Add short-term memory](#add-short-term-memory) as a part of your agent's [state](/oss/javascript/langgraph/graph-api#state) to enable multi-turn conversations.
@@ -41,7 +40,7 @@ In production, use a checkpointer backed by a database:
     ```typescript
     import { PostgresSaver } from "@langchain/langgraph-checkpoint-postgres";
 
-    const DB_URI = "postgresql://postgres:postgres@localhost:5442/postgres?sslmode=disable";
+    const DB_URI = "postgresql://postgres:postgres@localhost:5432/postgres?sslmode=disable";
     const checkpointer = PostgresSaver.fromConnString(DB_URI);
 
     const builder = new StateGraph(...);
@@ -85,7 +84,7 @@ In production, use a checkpointer backed by a database:
 
   const model = new ChatAnthropic({ model: "claude-haiku-4-5-20251001" });
 
-  const DB_URI = "postgresql://postgres:postgres@localhost:5442/postgres?sslmode=disable";
+  const DB_URI = "postgresql://postgres:postgres@localhost:5432/postgres?sslmode=disable";
   const checkpointer = PostgresSaver.fromConnString(DB_URI);
   // await checkpointer.setup();
 
@@ -291,7 +290,7 @@ In production, use a store backed by a database:
     ```typescript
     import { PostgresStore } from "@langchain/langgraph-checkpoint-postgres/store";
 
-    const DB_URI = "postgresql://postgres:postgres@localhost:5442/postgres?sslmode=disable";
+    const DB_URI = "postgresql://postgres:postgres@localhost:5432/postgres?sslmode=disable";
     const store = PostgresStore.fromConnString(DB_URI);
 
     const builder = new StateGraph(...);
@@ -359,7 +358,7 @@ In production, use a store backed by a database:
     return { messages: [response] };
   };
 
-  const DB_URI = "postgresql://postgres:postgres@localhost:5442/postgres?sslmode=disable";
+  const DB_URI = "postgresql://postgres:postgres@localhost:5432/postgres?sslmode=disable";
 
   const store = PostgresStore.fromConnString(DB_URI);
   const checkpointer = PostgresSaver.fromConnString(DB_URI);
